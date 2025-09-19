@@ -18,7 +18,6 @@ export class TaskController {
 	}
 
 	// 2. Listar todas las tareas
-    @ApiBody({ type: CreateTaskDto })
 	@Get()
 	findAll() {
 		// Devuelve el array de tareas
@@ -26,7 +25,6 @@ export class TaskController {
 	}
 
 	// 3. Obtener una tarea por id
-    @ApiBody({ type: CreateTaskDto })
 	@Get(':id')
 	findOne(@Param('id') id: string) {
 		// Busca la tarea por id
@@ -46,7 +44,6 @@ export class TaskController {
 	}
 
 	// 5. Eliminar una tarea
-    @ApiBody({ type: CreateTaskDto })
 	@Delete(':id')
 	remove(@Param('id') id: string) {
 		// Elimina la tarea por id
